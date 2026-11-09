@@ -1,0 +1,26 @@
+[package]
+name = "aeitron"
+version = "0.1.0"
+edition = "2021"
+authors = ["Mahmud Hasan <iammahmudhasanofficial@gmail.com>"]
+description = "Official Rust SDK for the Aeitron Intelligent Global Edge & Sovereign Platform"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/aeitron/api-rust-sdk"
+keywords = ["aeitron", "edge", "ai", "inference", "sdk"]
+categories = ["api-bindings", "web-programming::http-client"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "default-tls", "http2"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.40", features = ["sync", "time", "rt", "macros"] }
+thiserror = "2.0"
+ring = "0.17"
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+tokio = { version = "1.40", features = ["full"] }
+hyper = { version = "1.4", features = ["full"] }
+hyper-util = { version = "0.1", features = ["full"] }
+http-body-util = "0.1"
